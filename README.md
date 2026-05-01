@@ -16,37 +16,37 @@ A premium, production-ready URL shortener built with React, Node.js, and MongoDB
 
 ## Getting Started
 
-### Local Development
+### Local Development (Quick Start)
 
-1. **Prerequisites**:
-   - Node.js (v18+)
-   - MongoDB running locally (default: `mongodb://localhost:27017/url_shortener`)
+1. **Install All Dependencies**:
+   ```bash
+   npm run install-all
+   ```
 
-2. **Backend Setup**:
+2. **Run Both Frontend & Backend**:
+   ```bash
+   npm run dev
+   ```
+
+The app will be available at:
+- **Frontend**: `http://localhost:5173`
+- **Backend**: `http://localhost:5000`
+
+### Manual Setup (Optional)
+
+1. **Backend Setup**:
    ```bash
    cd server
    npm install
    npm run dev
    ```
 
-3. **Frontend Setup**:
+2. **Frontend Setup**:
    ```bash
-   cd frontend
+   cd client
    npm install
    npm run dev
    ```
-
-### Using Docker (Deployment Ready)
-
-To run the entire stack (Frontend, Backend, MongoDB) with one command:
-
-```bash
-docker-compose up --build
-```
-
-The app will be available at:
-- **Frontend**: `http://localhost:5173`
-- **Backend**: `http://localhost:5000`
 
 ## Environment Variables
 

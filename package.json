@@ -1,0 +1,26 @@
+{
+  "name": "url_shortner",
+  "version": "1.0.0",
+  "description": "A premium, production-ready URL shortener built with React, Node.js, and MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start --prefix server\" \"npm run dev --prefix client\"",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShivangChaurasia/URL_Shortner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShivangChaurasia/URL_Shortner/issues"
+  },
+  "homepage": "https://github.com/ShivangChaurasia/URL_Shortner#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
