@@ -3,9 +3,9 @@ import { Copy, ExternalLink, BarChart3, Check } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const UrlCard = ({ urlData }) => {
+const UrlCard = ({ urlData, backendUrl }) => {
   const [copied, setCopied] = React.useState(false);
-  const shortUrl = `${window.location.origin.replace('5173', '5000')}/${urlData.shortCode}`;
+  const shortUrl = `${backendUrl}/${urlData.shortCode}`;
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(shortUrl);
@@ -46,7 +46,7 @@ const UrlCard = ({ urlData }) => {
             {copied ? 'Copied' : 'Copy'}
           </button>
           <a href={shortUrl} target="_blank" rel="noopener noreferrer">
-            <button style={{ padding: '0.5rem 1rem', fontSize: '0.875rem', background: 'rgba(255,255,255,0.1)', border: '1px solid var(--glass-border)' }}>
+            <button style={{ padding: '0.5rem 1rem', fontSize: '0.875rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', color: 'var(--text-primary)' }}>
               <ExternalLink size={16} />
               Visit
             </button>
