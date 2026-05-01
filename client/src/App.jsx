@@ -4,6 +4,8 @@ import { Sparkles, History, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import UrlForm from './components/UrlForm';
 import UrlCard from './components/UrlCard';
+import LottieAnimation from './components/LottieAnimation';
+import linkAnimation from './assets/animations/link.json';
 
 const API_URL = 'http://localhost:5000/api';
 
@@ -48,11 +50,13 @@ function App() {
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          style={{ display: 'inline-flex', padding: '0.75rem 1.5rem', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '100px', border: '1px solid rgba(99, 102, 241, 0.2)', color: 'var(--accent-primary)', gap: '0.5rem', alignItems: 'center', marginBottom: '2rem' }}
+          style={{ display: 'inline-flex', padding: '0.75rem 1.5rem', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '100px', border: '1px solid rgba(99, 102, 241, 0.2)', color: 'var(--accent-primary)', gap: '0.5rem', alignItems: 'center', marginBottom: '1rem' }}
         >
           <Zap size={16} fill="currentColor" />
           <span style={{ fontWeight: 600, fontSize: '0.875rem' }}>Production Ready URL Shortener</span>
         </motion.div>
+        
+        <LottieAnimation animationData={linkAnimation} width={250} height={250} />
         
         <motion.h1 
           initial={{ y: -20, opacity: 0 }}
