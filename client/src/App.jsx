@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Sparkles, History, Zap, Sun, Moon, Github, Linkedin, Globe } from 'lucide-react';
+import { Sparkles, History, Zap, Sun, Moon, Code, Briefcase, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import UrlForm from './components/UrlForm';
 import UrlCard from './components/UrlCard';
@@ -140,15 +140,18 @@ function App() {
 
       <footer style={{ marginTop: '5rem', borderTop: '1px solid var(--glass-border)', paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <a href="https://github.com/ShivangChaurasia" target="_blank" rel="noopener noreferrer" className="social-link" title="GitHub">
-              <Github size={24} />
+          <div style={{ display: 'flex', gap: '2.5rem' }}>
+            <a href="https://github.com/ShivangChaurasia" target="_blank" rel="noopener noreferrer" className="social-link" title="GitHub" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+              <Code size={24} />
+              <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>GitHub</span>
             </a>
-            <a href="https://www.linkedin.com/in/shivang-chaurasia-754232297/" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn">
-              <Linkedin size={24} />
+            <a href="https://www.linkedin.com/in/shivang-chaurasia-754232297/" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+              <Briefcase size={24} />
+              <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>LinkedIn</span>
             </a>
-            <a href="https://shivangchaurasia.vercel.app/" target="_blank" rel="noopener noreferrer" className="social-link" title="Portfolio">
+            <a href="https://shivangchaurasia.vercel.app/" target="_blank" rel="noopener noreferrer" className="social-link" title="Portfolio" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
               <Globe size={24} />
+              <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>Portfolio</span>
             </a>
           </div>
           
